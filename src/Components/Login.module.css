@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100svh;
     background-color: #E7EDF9;
 }
 .container {
@@ -119,7 +119,7 @@
     .container {
         flex-direction: column;
         width: 100%;
-        height: 100dvh;
+        height: 100svh;
         border-radius: 0px;
     }
     .leftContainer {

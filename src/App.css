@@ -14,8 +14,8 @@
 }
 @media (max-width: 50rem) {
     .pageContainer {
-        min-height: 100dvh;
-        max-height: 100vh;
+        min-height: 100svh;
+        max-height: 100svh;
         grid-template-columns: auto;
         grid-template-rows: 92% 8%;
         grid-template-areas: 
