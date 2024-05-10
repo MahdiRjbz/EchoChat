@@ -12,7 +12,7 @@ import Users from '../Components/Pages/Users';
 function Router() {
     return (
         <Routes>
-            <Route path='login' element={<Login />} />
+            <Route path='/login' element={<Login />} />
                 <Route path='/' element={<Layout />}>
                     <Route path='/chats' element={<Chats />} />
                     <Route path='/profile' element={<Profile />} />
