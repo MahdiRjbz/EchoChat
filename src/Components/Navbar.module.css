@@ -6,7 +6,7 @@
 .navbar {
     grid-area: left;
     background-color: #665DFE;
-    min-height: 100vh;
+    min-height: 100dvh;
     width: 4.5rem;
     display: grid;
     place-content: center;
