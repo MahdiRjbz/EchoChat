@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.titleDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 4rem;
+    padding: .5rem;
+}
+.titleDiv > h1 {
+    font-size: 1.3rem;
+}
+.titleDiv > h4 {
+    font-size: unset;
+    color: #adb5bd;
+    font-weight: 100;
+}
+.contentContainer {
+    flex-grow: 1;
+    background-color: #f8f9fa;
+    padding: .7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.langDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: .5rem;
+}
+.inputsContainer {
+    overflow-y: scroll;
+}
+.txtFieldContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding-bottom: .5rem;
+    flex-grow: 1;
+}
+.input1 {
+    resize: vertical;
+    width: 100%;
+    border-radius: 5px;
+    border: .5px solid #e5e9f2;
+    padding: .5rem;
+    font-size: 1rem;
+    box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.1);
+}
+.input1:focus {
+    border: solid 1px #463cff;
+    outline: solid 1px #463cff;
+}
+.input2:focus {
+    border: solid 1px #463cff;
+    outline: solid 1px #463cff;
+}
+.input2 {
+    resize: none;
+    width: 100%;
+    border-radius: 5px;
+    border: .5px solid #e5e9f2;
+    padding: .5rem;
+    font-size: 1rem;
+    direction: rtl;
+    box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.1);
+}

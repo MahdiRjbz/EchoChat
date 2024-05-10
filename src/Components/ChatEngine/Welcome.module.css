@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'tuesday';
+    src: url('/Assets/tuesdaynight-regular.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    z-index: -10;
+    background-color: #E7F7F8;
+    overflow-y: scroll;
+}
+.container {
+    padding: 1rem;
+    max-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* row-gap: .5rem; */
+    justify-content: center;
+    align-items: center;
+    z-index: -10;
+    overflow-y: scroll;
+}
+@keyframes logo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.bannerContainer {
+    width: 50%;
+    position: relative;
+    pointer-events: none;
+    user-select: none;
+}
+
+.banner {
+    user-select: none;
+    width: 100%;
+    z-index: -10;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.4));
+    
+}
+.logoContainer {
+    pointer-events: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    
+
+}
+.logo {
+    width: 30%;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 10%;
+    user-select: none;
+    filter: invert(55%) sepia(66%) saturate(6998%) hue-rotate(230deg) brightness(99%) contrast(103%);
+    animation: logo 2.5s infinite ease-in-out;
+}
+h3 {
+    margin-bottom: 1rem;
+}
+p {
+    width: 60%;
+    
+}
+.developer {
+    font-family: 'tuesday';
+    font-size: 2rem;
+    margin-block: .5rem;
+    color: #00cccc;
+}
+
+@media (max-width: 50em) {
+    .mainContainer {
+        height: 100vh;
+        max-height: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .bannerContainer {
+        width: clamp(230px, 70%, 500px);
+        height: clamp(150px, 300px, 300px);
+    }
+    .banner {
+        height: clamp(150px, 300px, 400px);
+    }
+    .logo {
+        width: clamp(80px, 30%, 250px);
+        height: clamp(180px, 35%, 250px);
+        margin-bottom: 0;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+    p {
+        width: 100%;
+        
+    }
+    .developer{
+        font-size: 1.7rem;
+    }
+}

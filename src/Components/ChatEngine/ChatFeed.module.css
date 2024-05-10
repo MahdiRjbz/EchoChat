@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-rows: 4rem auto 4rem;
+}
+.chatFeedContainer {
+    height: 100%;
+    overflow-y: scroll;
+}
+.chatFeedContainer * {
+    overflow-anchor: none;
+}
+.anchor {
+    overflow-anchor: auto;
+    height: 1px;
+}
+.chatsContainer {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding: 1.5rem 2.5rem;
+}
+.chatBubbleContainer {
+    display: flex;
+    justify-content: left;
+    align-items: self-start;
+    flex-direction: column;
+}
+.chatBubbleContainer pre {
+    color: #2f2f2f;
+}
+.chatBubbleContainer .chatBubbleDiv {
+    background-color: #F5F6FA;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    position: relative;
+}
+.userChatBubbleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: self-end;
+}
+.userChatBubbleContainer pre {
+    color: white;
+}
+.userChatBubbleContainer .chatBubbleDiv {
+    background-color: #665DFE;
+    border-radius: 10px;
+    position: relative;
+    padding: 1rem 2.5rem;
+    z-index: 5;
+    
+}
+.chatBubbleContainer .imageDiv {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    background-color: white;
+    top: calc(100% - 2rem);
+    right: calc(100% - 2rem); 
+    cursor: pointer;   
+}
+.userChatBubbleContainer .imageDiv {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    background-color: white;
+    top: calc(100% - 2rem);
+    left: calc(100% - 2rem);    
+    cursor: pointer;
+}
+.profile {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+} 
+.chatBubbleDiv {
+    min-width: 8rem;
+}
+.chatBubbleDiv > pre {
+    max-width: 20rem;
+    text-align: center;
+    word-wrap: break-word;
+    line-break: loose;
+    width: 100%;
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+}
+.moreDiv > span {
+    font-size: .7rem;
+    user-select: none;
+}
+.moreDiv {
+    height: 2.3rem;
+    padding: .5rem;
+    margin-right: 1.8rem;
+    display: flex;
+    justify-content: end;
+    column-gap: .7rem;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.chatBubbleContainer .moreDiv {
+    margin-left: 1.8rem;
+    flex-direction: row;
+    justify-content: start;
+}
+.personalInfoContainer {
+    background-color: rgba(0, 0, 0, 0.471);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    animation-name: fadeinb;
+    animation-duration: 200ms;
+    z-index: 9;
+    opacity: 100%;
+}
+.headContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.personalInfoDivC{
+    display: block;
+    height: 31rem;
+    width: 35rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 1rem;
+    opacity: 100%;
+    z-index: 8;
+    transition: all 2s ease;
+}
+.personalInfoDivC > span {
+    border-top: 1px solid grey;
+    margin: .5rem 0rem 1rem 0rem;
+    display: block;
+    height: 1px;
+    width: 100%;
+}
+@keyframes fadeinb {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+.personalImageDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem 0;
+}
+.personalImageDiv > img {
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.1);
+}
+.infoLabelContainer {
+    display: grid;
+    row-gap: .8rem;
+    column-gap: 1rem;
+    grid-template-areas: 
+        'name lastName'
+        'email email'
+        'message message'
+    ;
+    width: 100%;
+}
+.infoLabelContainer > div {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: white;
+    border: .5px solid #e5e9f2;
+    box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.1);
+}
+.nameDiv, .lastNameDiv, .emailDiv {
+    flex-direction: column;
+}
+.infoLabelContainer h6 {
+    font-size: .8rem;
+    color: #665DFE;
+    user-select: none;
+}
+.messageDiv {
+    background-color: #665DFE;
+    width: 100%;
+    height: 8.5rem;
+    border: 1px grey solid;
+    margin-bottom: 1rem;
+    grid-area: message;
+    display: flex;
+    flex-direction: column;
+}
+.messageDiv > h5 {
+    text-align: center;
+}
+@media (max-width: 50em) {
+    .container {
+        min-height: 100%;
+        max-height: 100%;
+        grid-template-rows: 4rem auto 2rem;
+    }
+    .chatsContainer {
+        padding: 1rem 2rem;
+    }
+    .chatBubbleDiv {
+        min-width: 8rem;
+        max-width: 15rem;
+        padding: 1.2rem !important;
+    }
+    .userChatBubbleContainer .imageDiv {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .userChatBubbleContainer span, .chatBubbleContainer span {
+        font-size: .6rem;
+    }
+    .chatBubbleContainer .imageDiv {
+        width: 2.8rem;
+        height: 2.8rem;   
+    }
+    .profile {
+        height: 2rem;
+        width: 2rem;
+    }
+    .messageDiv {
+        /* justify-content: space-between; */
+    }
+    .messageText {
+        font-size: .9rem;
+    }
+    .personalInfoDivC {
+        /* height: calc(100vh - 5rem); */
+        width: calc(100vw - 2rem);
+    }
+}

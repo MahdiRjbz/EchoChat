@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    border-right: .5px solid #e5e9f2;
+    background-color: #665DFE;
+    max-height: 100%;
+}
+.container {
+    height: calc(100vh - 7rem);
+    background-color: #f8f9fa;
+    padding: .7rem;
+    overflow-y: scroll;
+}
+@media (max-width: 50em) {
+    .mainContainer {
+        flex-grow: 1;
+    }
+    
+}
+

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.pageContainer{
+    display: grid;
+    grid-template-columns: 4.5rem auto 4rem;
+    grid-template-areas: 
+        'left main right'
+        'left main right'
+        'left main right'
+        
+    ;
+}
+@media (max-width: 50rem) {
+    .pageContainer {
+        min-height: 100vh;
+        max-height: 100vh;
+        grid-template-columns: auto;
+        grid-template-rows: 92% 8%;
+        grid-template-areas: 
+        'main'
+        'left'
+        ;
+    }
+}

@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.titleDiv{
+    width: 100%;
+    height: 6rem;
+    background-color: white;
+    padding: 1rem;
+    border-bottom: .5px solid #e5e9f2;
+}
+.titleDiv > h1 {
+    font-size: 1.3rem;
+}
+.titleDiv > h4 {
+    font-size: 1.1rem;
+    color: #adb5bd;
+    font-weight: 100;
+}
+.Body {
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+.profileImageContainer {
+    width: 62rem;
+    height: 15rem;
+    background-color: white;
+    border: .5px solid #e5e9f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.8rem;
+}
+.profileImageContainer > img {
+    border-radius: 50%;
+}
+.infoContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    border-radius: 5px;
+}
+.infoContainer > div {
+    background-color: white;
+    border: .5px solid #e5e9f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 10rem;
+    
+}
+.infoLabelContainer {
+    box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.1);
+}
+.infoTitleDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.infoDiv:nth-child(4) {
+    grid-column: 2;
+}
+.infoTitleDiv > p {
+    text-align: center;
+    width: 100%;
+    color: #adb5bd;
+}
+.infoTitleDiv > h6 {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 80%;
+    line-break: anywhere;
+}
+
+@media (max-width: 50em) {
+    .container {
+        height: 100%;
+        min-height: 100%;
+        overflow-y: scroll;
+    }
+    .Body {
+        overflow-y: scroll;
+    }
+    .titleDiv {
+        height: 4rem;
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titleDiv > h4 {
+        font-size: unset;
+    }
+    .sidebar {
+        width: 100vw;
+        
+    }
+    .profileImageContainer {
+        width: 100%;
+    }
+    .infoContainer {
+        width: 100%;
+        place-content: center;
+        grid-template-columns: 1fr 1fr;      
+    }
+    .infoContainer > div {
+        width: unset;
+    }
+    .infoTitleDiv > h6 {
+        font-size: 0.9rem;
+    }
+}

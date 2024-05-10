@@ -1,0 +1,85 @@
+.noteContainer p, .noteContainer h6 {
+    color: #adb5bd;
+    text-align: left;
+    width: 100%;
+}
+.noteContainer h6 {
+    font-size: 12px;
+}
+.noteContainer p{
+    word-wrap: break-word;
+    text-wrap: wrap;
+    line-break: anywhere;
+    font-size: 14px;
+    width: 100%;
+    color: #909090;
+    
+}
+.noteContainer h5 {
+    font-size: 17.5px;
+    margin-bottom: .5rem;
+}
+.familyLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    color: white;
+    padding: .1rem .3rem;
+    background-color: #ff337c;
+    border-radius: 5px;
+}
+.workLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    color: white;
+    padding: .1rem .3rem;
+    border-radius: 5px;
+    background-color: #3c91ec;
+
+}
+.personalLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    color: white;
+    padding: .1rem .3rem;
+    background-color: #ffb74d;
+    border-radius: 5px;
+}
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    color: white;
+    padding: .1rem .3rem;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.noteContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    max-height: 100%;
+    width: 100%;
+    border: .5px solid #bbbbbd;
+    border-radius: 5px;
+}
+.contentContainer {
+    width: 100%;
+    row-gap: .5rem;
+    padding: 1rem;
+}
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    border-top: .5px solid #bbbbbd;
+}

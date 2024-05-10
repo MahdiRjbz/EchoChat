@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chatCardContainer {
+    display: flex;
+    justify-content: start;
+    margin-block: 1rem;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    padding: .5rem 1.5rem;
+    height: 5rem;
+    border: 1px solid color-mix(in oklab, white 90%, black 10%);
+    transition: all .2s ease;
+}
+.activeChatCardContainer {
+    display: flex;
+    justify-content: start;
+    margin-block: 1rem;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    padding: .5rem 1.5rem;
+    height: 5.5rem;
+    background-color: #665DFE;
+    border: 1px solid color-mix(in oklab, white 90%, black 10%);
+    transition: all .2s ease;
+}
+.activeChatCardContainer .titleDiv > h2, .activeChatCardContainer .lastDiv > p {
+    color: white;
+}
+.activeChatCardContainer .titleDiv > h6 {
+    color: white;    
+    opacity: 90%;
+}
+.lastDiv > p {
+    color: color-mix(in oklab, black 40%, white 60%);
+    opacity: 90%;
+    width: 15rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+}
+.chatCardContainer:hover {
+    border-color: #665DFE;
+}
+.avatarDiv > img {
+    width: 3rem;
+    border-radius: 50%;
+}
+.descContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.titleDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titleDiv > h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.titleDiv > h6 {
+    font-size: .80rem;
+}
+.titleDiv > h6 {
+    color: color-mix(in oklab, black 40%, white 60%);
+}
+
+
+@media (max-width: 50em) {
+    .lastDiv {
+        max-width: 100%;
+    }
+    .lastDiv > p {
+        color: color-mix(in oklab, black 40%, white 60%);
+        opacity: 90%;
+        padding: .1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+}

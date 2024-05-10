@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: .7rem;
+    row-gap: 1rem;
+    overflow-y: scroll;
+}
+.noteDiv {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    row-gap: 1rem;
+    width: 100%;
+    overflow-y: scroll;
+}
+.titleDiv {
+    background-color: white;
+    height: 4rem;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: .5px solid #e5e9f2;
+    
+
+}
+.titleDiv > h4 {
+    color: #adb5bd;
+    font-weight: 100;
+}
+.titleDiv > h1 {
+    margin: 0;
+    font-size: 1.3rem;
+} 
+.inputsContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    border-bottom: .5px solid #e5e9f2;
+}
+.noteContainer {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+.buttonContainer {
+    width: 100%;
+}
+.mainButtonContainer {
+    border-top: .5px solid #e5e9f2;
+}
+.newNoteWrapper {
+    background: rgba(0, 0, 0, 0.508);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+.newNoteContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 30rem;
+    height: 20rem;
+    border-radius: 5px;
+    z-index: 9;
+    background-color: white;
+}
+.inputsDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.newNoteTitleDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .5px solid #e5e9f2;
+}
+.newNoteTitleDiv > h3 {
+    margin: 0;
+}
+.newNoteInputContainer {
+    display: flex;
+    flex-grow: 1;
+    row-gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    overflow-y: scroll;
+    min-height: 20rem;
+    max-height: 50rem;
+    padding: 1rem 0;
+    overflow-y: scroll;
+}
+.newNoteInputContainer label {
+    text-align: left;
+}
+.input1 {
+    resize: vertical;
+    width: 100%;
+    height: 7rem;
+    min-height: 7rem;
+    max-height: 15rem;
+    border-radius: 5px;
+    border: .5px solid #bbbbbd;
+    padding: .5rem;
+    font-size: 1rem;
+}
+.input1::placeholder {
+    color: #A1A1A1;
+    font-weight: 100;
+}
+.input1:focus {
+    border: solid 1px #463cff;
+    outline: solid 1px #463cff;
+}
+.newNoteButtonContainer {
+    display: flex;
+    justify-content: right;
+    column-gap: 1rem;
+}
+.noteDiv > p {
+    text-align: center;
+    padding-top: 30%;
+}
+@media (max-width: 50em) {
+    .newNoteWrapper {
+        padding: 2rem 1rem;
+    }
+    .newNoteContainer {
+        width: 100%;
+        height: 100%;
+    }
+}
