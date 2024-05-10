@@ -114,8 +114,8 @@
     justify-content: center;
     align-items: baseline;
     overflow-y: scroll;
-    min-height: 20rem;
-    max-height: 35rem;
+    /* min-height: 20rem; */
+    max-height: 20rem;
     padding: 1rem 0;
     overflow-y: scroll;
 }
