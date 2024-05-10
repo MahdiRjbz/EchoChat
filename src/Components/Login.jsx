@@ -7,12 +7,12 @@ import { LoadingButton } from '@mui/lab';
 
 const Login = () => {
     const [loading, setLoading] = useState(false)
-    const signinHandle = () => {
+    const signinHandle = (event) => {
+        event.preventDefault()
         setLoading(true)
         const provider = new GoogleAuthProvider()
-        signInWithRedirect(auth, provider).then(() => {
-            setLoading(false)
-        }).catch((error) => {
+        signInWithRedirect(auth, provider)
+        .catch((error) => {
             alert(error)
         })
         
