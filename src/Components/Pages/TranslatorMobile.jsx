@@ -65,7 +65,6 @@ const TranslatorMobile = () => {
                             onKeyUp={saveText}
                             value={text}
                             placeholder='Type to Translate...'
-                            autoFocus
                         />
                         <TextareaAutosize
                             minRows={6}

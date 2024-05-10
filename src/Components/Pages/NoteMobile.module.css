@@ -111,11 +111,11 @@
     flex-grow: 1;
     row-gap: 1rem;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: baseline;
     overflow-y: scroll;
     min-height: 20rem;
-    max-height: 50rem;
+    max-height: 35rem;
     padding: 1rem 0;
     overflow-y: scroll;
 }
