@@ -12,6 +12,8 @@ const Login = () => {
         const provider = new GoogleAuthProvider()
         signInWithRedirect(auth, provider).then(() => {
             setLoading(false)
+        }).catch((error) => {
+            alert(error)
         })
         
     }

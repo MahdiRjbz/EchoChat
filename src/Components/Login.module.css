@@ -120,10 +120,12 @@
         flex-direction: column;
         width: 100%;
         height: 100vh;
+        border-radius: 0px;
     }
     .leftContainer {
         width: 100%;
         height: 12rem;
+        border-radius: none;
     }
     .descriptionDiv > p, .descriptionDiv > span, .descriptionDiv > h5 {
         display: none;
