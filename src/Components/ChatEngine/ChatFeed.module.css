@@ -102,7 +102,7 @@
 }
 .chatBubbleDiv > pre {
     max-width: 20rem;
-    text-align: right;
+    text-align: center;
     word-wrap: break-word;
     line-break: loose;
     width: 100%;
