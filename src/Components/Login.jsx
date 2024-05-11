@@ -15,8 +15,8 @@ const Login = () => {
         .catch((error) => {
             if (error.message.includes('auth/network-request-failed')) {
                 alert(`Network Error:
- Please use VPN for this app
- NOTE: VLESS PROTOCOL NOT WORKING IN THIS APP
+Please use VPN for this app
+NOTE: VLESS PROTOCOL NOT WORKING IN THIS APP
                 `)
                 setLoading(false)
 
