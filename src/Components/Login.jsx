@@ -13,7 +13,10 @@ const Login = () => {
         const provider = new GoogleAuthProvider()
         signInWithRedirect(auth, provider)
         .catch((error) => {
-            alert(error)
+            // if (error.message) {
+
+            // }
+            alert(error.message)
         })
         
     }

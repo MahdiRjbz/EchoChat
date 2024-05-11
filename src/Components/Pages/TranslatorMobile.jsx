@@ -58,6 +58,7 @@ const TranslatorMobile = () => {
                     </div>
                     <div className={styles.txtFieldContainer}>
                         <TextareaAutosize
+                            style={lang1 === 'fa-IR' ? { direction: 'rtl' } : { direction: 'ltr' }}
                             minRows={6}
                             aria-label="maximum height"
                             className={styles.input1}
@@ -67,6 +68,7 @@ const TranslatorMobile = () => {
                             placeholder='Type to Translate...'
                         />
                         <TextareaAutosize
+                            style={lang2 === 'en-US' ? { direction: 'ltr' } : { direction: 'rtl' }}
                             minRows={6}
                             aria-label="maximum height"
                             readOnly

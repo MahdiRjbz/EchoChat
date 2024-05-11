@@ -59,11 +59,10 @@ const NoteMobile = () => {
 
 
     const addHandler = async () => {
-        const id = uuidv4();
-        setLoading(true)
-        console.log(id)
         const colRef = collection(db, "users", data.email, "notes")
         if (newNoteValues.title.length > 0 && newNoteValues.content.length > 0) {
+            const id = uuidv4();
+            setLoading(true)
             await setDoc(doc(colRef, id), {
                 title: newNoteValues.title,
                 content: newNoteValues.content,
