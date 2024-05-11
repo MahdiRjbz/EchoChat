@@ -18,6 +18,7 @@ const Login = () => {
                     Please use VPN for this app
                     NOTE: VLESS PROTOCOL NOT WORKING IN THIS APP
                 `)
+                setLoading(false)
 
             }
         })
