@@ -13,10 +13,13 @@ const Login = () => {
         const provider = new GoogleAuthProvider()
         signInWithRedirect(auth, provider)
         .catch((error) => {
-            // if (error.message) {
+            if (error.message.includes('auth/network-request-failed')) {
+                alert(`Network Error:  
+                    Please use VPN for this app
+                    NOTE: VLESS PROTOCOL NOT WORKING IN THIS APP
+                `)
 
-            // }
-            alert(error.message)
+            }
         })
         
     }
