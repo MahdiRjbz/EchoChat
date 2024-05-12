@@ -102,7 +102,7 @@
     .container {
         flex-grow: 1;
         overflow-y: scroll;
-        height: 100svh;
+        /* height: 100svh; */
         max-height: 100svh;
         overflow-y: scroll;
     }
