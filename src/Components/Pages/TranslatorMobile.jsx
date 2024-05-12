@@ -7,8 +7,8 @@ import { LoadingButton } from '@mui/lab';
 
 const TranslatorMobile = () => {
     const [loading, setLoading] = useState(false)
-    const [lang1, setLang1] = useState('en');
-    const [lang2, setLang2] = useState('fa');
+    const [lang1, setLang1] = useState('en-US');
+    const [lang2, setLang2] = useState('fa-IR');
     const [text, setText] = useState('');
     const [translated, setTranslated] = useState('');
 
@@ -44,15 +44,15 @@ const TranslatorMobile = () => {
                     <div className={styles.langDiv}>
                         <FormControl sx={{minWidth: 150, backgroundColor: 'white'}} size='small'>
                             <Select value={lang1} defaultValue={'English'} displayEmpty onChange={(e) => setLang1(e.target.value)}>
-                                <MenuItem value={'fa'}>Persian</MenuItem>
-                                <MenuItem value={'en'}>English</MenuItem>
+                                <MenuItem value={'fa-IR'}>Persian</MenuItem>
+                                <MenuItem value={'en-US'}>English</MenuItem>
                             </Select>
                         </FormControl>
                         <East sx={{width: '1rem'}} />
                         <FormControl sx={{minWidth: 150, backgroundColor: 'white'}} size='small'>
                             <Select value={lang2} defaultValue={'Persian'} displayEmpty onChange={(e) => setLang2(e.target.value)}>
-                                <MenuItem value={'fa'}>Persian</MenuItem>
-                                <MenuItem value={'en'}>English</MenuItem>
+                                <MenuItem value={'fa-IR'}>Persian</MenuItem>
+                                <MenuItem value={'en-US'}>English</MenuItem>
                             </Select>
                         </FormControl>
                     </div>
@@ -65,7 +65,7 @@ const TranslatorMobile = () => {
                             onChange={(e) => setText(e.target.value)}
                             onKeyUp={saveText}
                             value={text}
-                            placeholder='Type to Translate...'
+                            placeholder={ lang1 === 'fa-IR' ? 'برای ترجمه تایپ کنید...' : 'Type to Translate...'}
                         />
                         <TextareaAutosize
                             style={lang2 === 'en-US' ? { direction: 'ltr' } : { direction: 'rtl' }}
