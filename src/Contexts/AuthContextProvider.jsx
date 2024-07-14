@@ -5,6 +5,7 @@ import { useCollectionData } from 'react-firebase-hooks/firestore'
 import { isMobile } from 'react-device-detect';
 import { db } from '../Firebase';
 import { auth } from '../Firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 import Loading from '../Components/Loading/Loading';
 
 export const AuthContext = React.createContext();
@@ -23,9 +24,8 @@ const AuthContextProvider = ({children}) => {
     }, [users ,loading1])
 
     useEffect(() => {
-        auth.onAuthStateChanged((user) => {
+        onAuthStateChanged(auth, (user) => {
             setUser(user)
-            
             if (isMobile && user) {
                 navigate('/welcome')
             } else if (user) {
@@ -53,5 +53,6 @@ const AuthContextProvider = ({children}) => {
         </AuthContext.Provider>
     );
 };
+
 
 export default AuthContextProvider;

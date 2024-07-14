@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './Login.module.css'
 import { auth } from '../Firebase'
 import { Google } from '@mui/icons-material';
-import { signInWithRedirect, GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { LoadingButton } from '@mui/lab';
 
 const Login = () => {
@@ -11,7 +11,7 @@ const Login = () => {
         event.preventDefault()
         setLoading(true)
         const provider = new GoogleAuthProvider()
-        signInWithRedirect(auth, provider)
+        signInWithPopup(auth, provider)
         .catch((error) => {
             if (error.message.includes('auth/network-request-failed')) {
                 alert(`Network Error:
